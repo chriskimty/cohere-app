@@ -8,7 +8,6 @@ const App = () => {
 
   const [call, setCall] = useState([]);
   const [input, setInput] = useState('');
-  // const inputValue = input.valueOf;
 const options = {
   method: 'POST',
   url: 'https://api.cohere.ai/generate',
@@ -28,7 +27,6 @@ const options = {
     .request(options)
     .then((res) => {
       const results = res.data.generations[0].text;
-      // const results = res.data;
       setCall(results);
       console.log(results);
     })
