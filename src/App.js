@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios';
 import { useState } from 'react';
 import Test from './components/Test';
+import AnotherTest from './components/AnotherTest';
 
 const App = () => {
 
@@ -41,6 +42,7 @@ const options = {
     <div className="App">
 
       <Test />
+      <AnotherTest />
       <form onSubmit={handleFunction} action="submit">
         <label htmlFor="text">type here</label>
         <input type="text" value={input}

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from 'react';
 
-const Test = () => {
+const AnotherTest = () => {
 const [call, setCall] = useState([]);
 const options = {
   method: 'POST',
@@ -15,26 +15,18 @@ const options = {
   data: {
     max_tokens: 40,
     stop_sequences: ['"--"'],
-    return_likelihoods: 'NONE',
+    return_likelihoods: 'GENERATION',
     truncate: 'END',
-      prompt: `f"""
-    This program generates a pet name and personality given the type and age of pet.
+      prompt: `f"""   This program generates an answer based on a software engineering interview question.   
 
-    Type of pet: cat
-    Age of pet: 1
-    Pet name: Chabs
-    Personality: playful
-
-    Type of pet: dog
-    Age of pet: 10
-    Pet name: Dobby
-    Personality: calm
-
-    Type of pet: turtle
-    Age of pet: 3.5
-    Pet name: Albert
-    Personality: intelligent
-    `,
+    Question: What is an argument?
+    Answer: An argument is a value that is passed into a function. 
+    --
+    Question: What are loops?
+    Answer: Loops are used to repeat a block of code a number of times.
+    --
+    Question: What are objects?
+    Answer: An object is a collection of properties (variables, other objects, & functions), and property is a combination of name (as key) and value.`,
     model: 'xlarge',
     temperature: 0.6
   }
@@ -57,11 +49,11 @@ const handleFunction = (e) => {
   
     return (
         <>
-            <div>Hello</div>
+            <div>ANOTHER ONE</div>
             <button onClick={handleFunction}>press</button>
             <h3>{ call }</h3>
         </>
         
     )
 }
-export default Test;
+export default AnotherTest;
