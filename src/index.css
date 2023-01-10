@@ -9,28 +9,78 @@ html { box-sizing: border-box;}
 /* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Base Styles */
 body {
   font-family: 'Fira Sans', sans-serif;
+  background-image: url(./assets/betterWave.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-color: #fff;
+  font-size: 125%;
 }
 
+p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1728px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Nav */
 .navbar {
-  padding: 15px;
+  padding: 20px;
   display: flex;
   align-items: center;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #f2f2f2; */
 }
-.navbar h1 {
-  color: #3567f1;
+
+.links {
+  display: flex;
 }
-.navbar .links {
-  margin-left: auto;
+
+.links li {
+  margin-left: 25px;
 }
 .navbar a {
-  margin-left: 16px;
   text-decoration: none;
-  padding: 6px;
+  color: black;
 }
 .navbar a:hover {
+  /* change color & add focus */
   color: #3567f1;
+}
+.navbar .icon img {
+  width: 70px;
+}
+
+/* Home */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-family: 'Lilita One', cursive;
+}
+
+.home .icon img {
+  width: 350px;
+}
+
+.home p span {
+  display: block;
 }
