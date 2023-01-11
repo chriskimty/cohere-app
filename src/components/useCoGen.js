@@ -50,6 +50,7 @@ const handleFunction = (e) => {
   e.preventDefault();
   setIsPending(true);
   setCall(null);
+  setError(null);
     axios
       .request(options)
       .then((res) => {

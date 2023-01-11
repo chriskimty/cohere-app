@@ -76,7 +76,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* border-bottom: 1px solid #f2f2f2; */
 }
 
 .links {
@@ -124,6 +123,10 @@ button {
   display: block;
 }
 
+.instructions button {
+  font-size: 2.5rem;
+}
+
 /* Forms */
 form {
   display: flex;
@@ -162,7 +165,21 @@ form {
 }
 
 /* Results */
+.loading img {
+  width: 200px;
+}
 
+.error {
+  margin-top: 35px;
+  font-size: 2rem;
+}
+
+.results h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
 
 /* Examples Page */
 .spotlight {
@@ -202,5 +219,50 @@ form {
 }
 
 .footer a:hover {
-  color: hotpink;
+  color: #d90166;
+}
+
+/* Media Queries */
+@media (max-width: 570px){
+  .instructions p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 500px){
+  .instructions p {
+    font-size: 1.15rem;
+    margin: 0px 10px;
+  }
+
+  .navbar {
+    justify-content: space-evenly;
+  }
+
+  .links li {
+    margin-left: 0px;
+  }
+
+  .links .button {
+    border: none;
+  }
+
+  .links .button:hover {
+    background-color: transparent;
+    color: #d90166;
+  }
+
+  .footer {
+    top: 0;
+    height: fit-content;
+  }
+
+  .footer p {
+    border: none;
+    background-color: white;
+    font-size: 0.8rem;
+    position: fixed;
+    margin: 3px 3px 0px 0px;
+    padding: 0px 10px;
+  }
 }

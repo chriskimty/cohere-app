@@ -1,4 +1,5 @@
 import useCoGen from './useCoGen';
+import loading from '../assets/catLoading.gif'
 
 const Forms = () => {
     const { data: type, personality, setType, setPersonality, handleFunction, call, isPending, error } = useCoGen();
@@ -15,9 +16,11 @@ const Forms = () => {
                 <button className="button">Generate Pet Name</button>
             </form>
             <div className="results">
-                {isPending && <div>Loading...</div>}
-                {error && <div>{error}</div>}
-                {call && <h3>{call}</h3>}
+                {isPending && <div className="loading">
+                    <img src={loading} alt="loading cat gif" />
+                </div>}
+                {error && <div className="error">{error}</div>}
+                {call && <h3>🖤 {call}🖤</h3>}
             </div>
         </div>
     )
