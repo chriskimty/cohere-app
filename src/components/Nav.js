@@ -9,13 +9,13 @@ const Navbar = () => {
         <Link to="/">
           <img src={icon} alt="PNG (pet name generator) icon" />
         </Link>
-        </div>
+      </div>
       <ul className="links">
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/examples">Examples</Link>
+          <Link to="/spotlight">Spotlight</Link>
         </li> 
       </ul>
     </nav>

@@ -84,3 +84,16 @@ ul {
 .home p span {
   display: block;
 }
+
+/* Examples Page */
+.spotlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.spotlight h2 {
+  font-family: 'Lilita One', cursive;
+  font-size: 5rem;
+}

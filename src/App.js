@@ -1,17 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Importing Components
 import Navbar from './components/Nav';
 import Home from './components/Home';
-import CoGenerate from './components/CoGenerate';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Spotlight from './components/Spotlight';
 
 const App = () => {
   return (
     <Router>
       <div className="App">
         <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-      <CoGenerate />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/spotlight" element={<Spotlight />} />
+        </Routes>
       </div>
     </Router>
   );

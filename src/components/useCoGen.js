@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from 'react';
 
-const CoGenerate = () => {
+const useCoGen = () => {
   const [type, setType] = useState('');
   const [personality, setPersonality] = useState('');
   const [call, setCall] = useState(null);
@@ -51,44 +51,28 @@ const CoGenerate = () => {
   // If regenerate, remove the data once it's re-clicked
 
 // For scalability and reusability:
-  // Make separate component for forms
-  // make a custom hook (useCoGen?/useAxios?) for the actual axios function?
-  // Maybe then change out the prompt: prompt and save that data in a different component
+  // Make separate component for forms - DONE
+  // make a custom hook (useCoGen?/useAxios?) for the actual axios function? - DONE (but could be better)
+  // Still need to figure out how to call the prompt on a different component
 const handleFunction = (e) => {
-  e.preventDefault();
-  setIsPending(true);
-  axios
-    .request(options)
-    .then((res) => {
+    e.preventDefault();
+    setIsPending(true);
+    axios
+      .request(options)
+      .then((res) => {
       const results = res.data.generations[0].text
       // Used split method to grab only the data that doesn't include new lines or unneeded spaces
       const modifiedResults = results.split(' ')[1]
-      setCall(modifiedResults);
-      setIsPending(false);
-    })
-    .catch((err) => {
+        setCall(modifiedResults);
+        console.log(modifiedResults);
+        setIsPending(false);
+      })
+      .catch((err) => {
       setIsPending(false);
       setError('Could not get data. Please try again!', err.message)
-  })
+    })
 }  
 
-  return (
-    <>
-        <form action="submit" onSubmit={handleFunction}>
-          <label htmlFor="text">Type of pet:</label>
-          <input type="text" value={type}
-          onChange={(e) => setType(e.target.value)} required />
-          
-          <label htmlFor="text">Personality:</label>
-            <input type="text" value={personality}
-            onChange={(e) => setPersonality(e.target.value)} required/>
-          <button>Generate Pet Name</button>
-        </form>
-      
-      {isPending && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      {call && <h3>{call}</h3>}
-    </> 
-  )
+  return { type, personality, setType, setPersonality, handleFunction, call, isPending, error }
 }
-export default CoGenerate;
+export default useCoGen;
