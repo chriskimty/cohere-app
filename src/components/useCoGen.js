@@ -46,17 +46,10 @@ const useCoGen = () => {
   }
 }
 
-// Errors to further handle:
-  // Disable button after one-time use? Or change text to regenerate?
-  // If regenerate, remove the data once it's re-clicked
-
-// For scalability and reusability:
-  // Make separate component for forms - DONE
-  // make a custom hook (useCoGen?/useAxios?) for the actual axios function? - DONE (but could be better)
-  // Still need to figure out how to call the prompt on a different component
 const handleFunction = (e) => {
-    e.preventDefault();
-    setIsPending(true);
+  e.preventDefault();
+  setIsPending(true);
+  setCall(null);
     axios
       .request(options)
       .then((res) => {
@@ -64,7 +57,6 @@ const handleFunction = (e) => {
       // Used split method to grab only the data that doesn't include new lines or unneeded spaces
       const modifiedResults = results.split(' ')[1]
         setCall(modifiedResults);
-        console.log(modifiedResults);
         setIsPending(false);
       })
       .catch((err) => {

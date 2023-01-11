@@ -6,13 +6,13 @@ const Forms = () => {
     return (
         <div className="forms">
             <form action="submit" onSubmit={handleFunction}>
-                <label htmlFor="text">Type of pet:</label>
+                <label htmlFor="text">What type of pet do you have?</label>
                 <input type="text" value={type}
-                onChange={(e) => setType(e.target.value)} required />
-                <label htmlFor="text">Personality:</label>
+                onChange={(e) => setType(e.target.value)} placeholder="cat" required />
+                <label htmlFor="text">What's your pet's personality?</label>
                     <input type="text" value={personality}
-                    onChange={(e) => setPersonality(e.target.value)} required/>
-                <button>Generate Pet Name</button>
+                    onChange={(e) => setPersonality(e.target.value)} placeholder="hilarious" required/>
+                <button className="button">Generate Pet Name</button>
             </form>
             <div className="results">
                 {isPending && <div>Loading...</div>}

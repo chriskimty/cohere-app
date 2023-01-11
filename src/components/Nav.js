@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import icon from '../assets/petNameGenIcon.png';
 
 const Navbar = () => {
+  // Refresh page to avoid going back to forms if generate button has already been pressed. Can return to this function for improved solution.
   const refresh = () => {
     window.reload();
   }
@@ -9,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="navbar wrapper">
       <div className="icon">
-        <Link to="/">
+        <Link to="/" onClick={refresh}>
           <img src={icon} alt="PNG (pet name generator) icon" />
         </Link>
       </div>
@@ -17,14 +18,14 @@ const Navbar = () => {
         <li>
           <Link to="/" onClick={refresh}>
             <p className="button">
-              <span class="material-symbols-outlined">house</span>
+              <span className="material-symbols-outlined">house</span>
               Home
             </p>
           </Link>
         </li>
         <li>
           <Link to="/spotlight">
-            <p className="button"><span class="material-symbols-outlined">cruelty_free</span>
+            <p className="button"><span className="material-symbols-outlined">cruelty_free</span>
               Spotlight
             </p>
           </Link>

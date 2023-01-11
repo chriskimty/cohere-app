@@ -25,7 +25,7 @@ body {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2.5rem;
 }
 
@@ -116,12 +116,53 @@ button {
 }
 
 .instructions p {
+  font-size: 1.5rem;
   line-height: 3rem;
 }
 
 .instructions p span {
   display: block;
 }
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.forms label {
+  margin-top: 20px;
+}
+
+.forms input {
+  margin-top: 10px;
+  min-width: 300px;
+  padding: 5px 15px;
+  border-radius: 25px;
+  border: 2px solid black;
+  font-family: 'Lilita One', cursive;
+}
+
+.forms input:focus {
+  outline: none;
+}
+
+.forms button {
+  margin-top: 35px;
+  font-size: 2.5rem;
+  background-color: black;
+  color: white;
+}
+
+.forms button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+/* Results */
+
 
 /* Examples Page */
 .spotlight {
@@ -138,16 +179,28 @@ button {
 
 /* Footer */
 .footer {
-  max-height: 7vh;
+  min-height: 7vh;
   width: 100%;
-  background-image: url(../src/assets/petLine.png);
+  display: flex;
+  justify-content: flex-end;
+  /* may return to using bg image... */
+  /* background-image: url(../src/assets/petLine.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right; */
   position: absolute;
   bottom: 0;
 }
 
 .footer p {
-  margin: 0px;
+  margin: 9px 20px;
+  font-family: 'Lilita One', cursive;
+  border: 1px solid #ffbbcc;
+  background-color: #ffbbcc;
+  padding: 3px 10px;
+  border-radius: 25px;
+}
+
+.footer a:hover {
+  color: hotpink;
 }
