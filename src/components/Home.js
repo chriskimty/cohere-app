@@ -1,20 +1,27 @@
+import { useState } from 'react';
 import logo from '../assets/petNameGenHorizontal.png';
+import Instructions from './Instructions';
 import Forms from './Forms';
 import Footer from './Footer';
 
 const Home = () => {
+    const [isClicked, setIsClicked] = useState(false);
+    const handleClick = (e) => {
+        e.preventDefault();
+        setIsClicked(true);
+    }
     return (
-        <div className="home wrapper">
+        <div className="home">
             <h1>
                 <span className="sr-only">Pet Name Generator</span>
                 <div className="icon">
                     <img src={logo} alt="PNG (pet name generator) logo" />
                 </div>
             </h1>
-            <p>There's a name every kittycat, puppypup, birdybird or other fur/non-fur bbs deserves.
-                <span>Use the PNG to give them their name for life!</span>
-            </p>
-            <Forms />
+            
+            {!isClicked
+                ? <Instructions handleClick={handleClick} />
+                : < Forms />}
             <Footer />
         </div>
     )

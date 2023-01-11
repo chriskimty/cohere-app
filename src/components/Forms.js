@@ -6,15 +6,14 @@ const Forms = () => {
     return (
         <div className="forms">
             <form action="submit" onSubmit={handleFunction}>
-          <label htmlFor="text">Type of pet:</label>
-          <input type="text" value={type}
-          onChange={(e) => setType(e.target.value)} required />
-          
-          <label htmlFor="text">Personality:</label>
-            <input type="text" value={personality}
-            onChange={(e) => setPersonality(e.target.value)} required/>
-          <button>Generate Pet Name</button>
-        </form>
+                <label htmlFor="text">Type of pet:</label>
+                <input type="text" value={type}
+                onChange={(e) => setType(e.target.value)} required />
+                <label htmlFor="text">Personality:</label>
+                    <input type="text" value={personality}
+                    onChange={(e) => setPersonality(e.target.value)} required/>
+                <button>Generate Pet Name</button>
+            </form>
             <div className="results">
                 {isPending && <div>Loading...</div>}
                 {error && <div>{error}</div>}

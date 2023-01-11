@@ -7,13 +7,15 @@ html { box-sizing: border-box;}
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* Google Fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 /* Base Styles */
 body {
-  font-family: 'Fira Sans', sans-serif;
+  /* font-family: 'Fira Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
   background-image: url(./assets/betterWave.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -37,6 +39,37 @@ ul {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.button {
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-family: 'Lilita One', cursive;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.button:hover {
+  color: white;
+  background: black;
+}
+
+.button:focus {
+  color: white;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
 /* Nav */
 .navbar {
   padding: 20px;
@@ -53,14 +86,7 @@ ul {
 .links li {
   margin-left: 25px;
 }
-.navbar a {
-  text-decoration: none;
-  color: black;
-}
-.navbar a:hover {
-  /* change color & add focus */
-  color: #3567f1;
-}
+
 .navbar .icon img {
   width: 70px;
 }
@@ -81,7 +107,19 @@ ul {
   width: 350px;
 }
 
-.home p span {
+/* Instructions */
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.instructions p {
+  line-height: 3rem;
+}
+
+.instructions p span {
   display: block;
 }
 
@@ -96,4 +134,20 @@ ul {
 .spotlight h2 {
   font-family: 'Lilita One', cursive;
   font-size: 5rem;
+}
+
+/* Footer */
+.footer {
+  max-height: 7vh;
+  width: 100%;
+  background-image: url(../src/assets/petLine.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer p {
+  margin: 0px;
 }

@@ -72,7 +72,6 @@ const handleFunction = (e) => {
       setError('Could not get data. Please try again!', err.message)
     })
 }  
-
   return { type, personality, setType, setPersonality, handleFunction, call, isPending, error }
 }
 export default useCoGen;
