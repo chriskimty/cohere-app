@@ -1,13 +1,268 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Base Styles */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* font-family: 'Fira Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  background-image: url(./assets/betterWave.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-color: #fff;
+  font-size: 125%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1728px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.button {
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 5px 15px;
+  font-family: 'Lilita One', cursive;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.button:hover {
+  color: white;
+  background: black;
+}
+
+.button:focus {
+  color: white;
+}
+
+button {
+  background: none;
+  cursor: pointer;
+}
+
+/* Nav */
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+}
+
+.links li {
+  margin-left: 25px;
+}
+
+.navbar .icon img {
+  width: 70px;
+}
+
+/* Home */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-family: 'Lilita One', cursive;
+}
+
+.home .icon img {
+  width: 350px;
+}
+
+/* Instructions */
+.instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.instructions p {
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.instructions p span {
+  display: block;
+}
+
+.instructions button {
+  font-size: 2.5rem;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.forms label {
+  margin-top: 20px;
+}
+
+.forms input {
+  margin-top: 10px;
+  min-width: 300px;
+  padding: 5px 15px;
+  border-radius: 25px;
+  border: 2px solid black;
+  font-family: 'Lilita One', cursive;
+}
+
+.forms input:focus {
+  outline: none;
+}
+
+.forms button {
+  margin-top: 35px;
+  font-size: 2.5rem;
+  background-color: black;
+  color: white;
+}
+
+.forms button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+/* Results */
+.loading img {
+  width: 200px;
+}
+
+.error {
+  margin-top: 35px;
+  font-size: 2rem;
+}
+
+.results h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+/* Examples Page */
+.spotlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.spotlight h2 {
+  font-family: 'Lilita One', cursive;
+  font-size: 5rem;
+}
+
+/* Footer */
+.footer {
+  min-height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* may return to using bg image... */
+  /* background-image: url(../src/assets/petLine.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right; */
+  position: absolute;
+  bottom: 0;
+}
+
+.footer p {
+  margin: 9px 20px;
+  font-family: 'Lilita One', cursive;
+  border: 1px solid #ffbbcc;
+  background-color: #ffbbcc;
+  padding: 3px 10px;
+  border-radius: 25px;
+}
+
+.footer a:hover {
+  color: #d90166;
+}
+
+/* Media Queries */
+@media (max-width: 570px){
+  .instructions p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 500px){
+  .instructions p {
+    font-size: 1.15rem;
+    margin: 0px 10px;
+  }
+
+  .navbar {
+    justify-content: space-evenly;
+  }
+
+  .links li {
+    margin-left: 0px;
+  }
+
+  .links .button {
+    border: none;
+  }
+
+  .links .button:hover {
+    background-color: transparent;
+    color: #d90166;
+  }
+
+  .footer {
+    top: 0;
+    height: fit-content;
+  }
+
+  .footer p {
+    border: none;
+    background-color: white;
+    font-size: 0.8rem;
+    position: fixed;
+    margin: 3px 3px 0px 0px;
+    padding: 0px 10px;
+  }
 }
