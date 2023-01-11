@@ -1,9 +1,9 @@
 # PNG: Pet Name Generator🐾!
 
-<a href="">🔗Live Link</a>
+<a href="https://pet-name-generator.vercel.app/">🔗Live Link</a>
 
 # About
-<p><a href=""> PNG</a> is a single-page React application that generates pet names per TYPE and PERSONALITY of your pet.</p>
+<p><a href="https://pet-name-generator.vercel.app/"> PNG</a> is a single-page React application that generates pet names per TYPE and PERSONALITY of your pet.</p>
 
 <p>This mini-project was completed in January 2023 after discovering <a href="https://docs.cohere.ai/">co:here's Language AI products and playground</a>. Through this project, I explored the <a href="https://docs.cohere.ai/reference/generate">Co.Generate API</a>, specifically - which this project is graciously powered by - as well as brushed up my React skills!</p>
 
